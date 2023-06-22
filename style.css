@@ -1,23 +1,219 @@
 * {
-    background-color: #252525;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #fff;
+    transition: .3s;
 }
-
+  
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #111;
+    animation: slide .5s;
 }
 
-.header {
+@keyframes slide {
+    0% {
+        transform: scale(.5, .5);
+    }
+    100% {
+        transform: scale(1, 1);
+
+    }
+}
+  
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    /* margin-left: 300px; */
+    width: 40vw;
+    padding: 0 30px;
+}
+
+  .nav a{
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'poppins', sans-serif;       
+    letter-spacing: .5px;
+    position: relative;
+}
+
+.nav a:after {
+    content: "";
+    position: absolute;
+    background-color: #ff0000;
+    height: 5px;
+    width: 0%;
+    border-radius: 5px;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+a:hover:after {
+    width: 110%;
+}
+
+a:hover {
+    color: #ffffff;
+
+}
+
+.log_btn {
+    margin: 0 20px;
+}
+
+.btn  {
+    margin-top: 15px;
+    padding-left: 50px;
+    width: 20vw;
+    
+}
+  
+
+.log_btn {
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    background-color: #00ffff;
+    border: none;
+    color: #000000;
+    border-radius: 10px;
+    transition: transform 1s;
     
 }
 
-p {
-    margin-left: 40%;
+.log_btn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    /* color: #fff; */
+    transform: scale(1.3);
+}
+
+.logo {
+    /* width: 20%; */
+    height: 50px;
+    margin: 10px 0px 0 50px;
+}
+
+#a_logo {
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    font-family: 'poppins', sans-serif;
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform .9s;
+    font-family: 'arial', sans-serif;
+    font-weight: bold;
+}
+
+#a_logo:hover {
+    color: #00ffff;
+    transform: scale(1.2);
+
+}
+
+.banner {
+    width: 100vw;
+    background-color: #111;
+    /* border: 1px solid #fff; */
+    margin-top: 100px;
+    padding-top: 100px;
+    height: 600px;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+}
+
+.banner h1 {
+    text-align: center;
+    margin-left: -600px;
+    font-size: 4rem;
+    margin-top: 100px;
+
+}
+
+.banner h2 {
+    font-size: 2rem;
+    margin-left: -600px;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+#name {
+    border: 5px solid #00ffff;
+    padding: 7px 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'monospace', sans-serif;
+    animation: typing 1.5s steps(10) infinite;
+    /* transition: 0.3s; */
+    color: rgba(225, 0, 0, 90%);
+    animation: name 1s;
+}
+
+@keyframes name {
+    0% {transform: scale(1);}
+    100% {transform: scale(.5);}
+
+}
+
+.icons {
+    margin-left: 490px;
     margin-top: 10px;
+    letter-spacing: 10px;
+}
+
+#html {
+    font-size: 2rem;
+}
+
+
+#css {
+    font-size: 2rem;
+}
+
+
+#react {
+    font-size: 2rem;
+}
+
+
+#git {
+    font-size: 2rem;
+}
+
+
+#github {
+    font-size: 2rem;
+    transition: transform 2s;
+}
+
+
+.icon {
+
+}
+
+.github:hover {
+    transform: scale(2);
+}
+
+.theA {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: transform 3s;
+    display: inline-block;
 }
